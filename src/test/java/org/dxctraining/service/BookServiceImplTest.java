@@ -25,11 +25,11 @@ import org.junit.jupiter.api.function.Executable;
 	 }
 	 @Test
 	 public void test_add1(){
-		 Author author=new Author("h1","stephen king");
-		 Book b1=new Book(73);
-		 String id="bk1";
-		 String name="misery";
-		 Book book=new ItBook(id,name,author,1500,b1, "english",1.0);
+		 Author author=new Author("a12","kalam");
+		 Book b1=new Book(1);
+		 String id="a14";
+		 String name="ignitedminds";
+		 Book book=new ItBook(id,name,author,500,b1, "english",1.0);
 		 service.add(book);
 		 String storedid=book.getId();
 		 Map<String,Book> store=BookStore.getStore();
@@ -53,12 +53,12 @@ import org.junit.jupiter.api.function.Executable;
 	 @Test
 	 public void testFindById() {
 		 Map<String,Book> store=BookStore.getStore();
-		 Author author=new Author("h1","stephen king");
-		 Book b1=new Book(73);
-		 String id="bk1";
-		 String name="misery";
-		 Book book=new ItBook(id,name,author,1500,b1, "english",1.0);
-		 book.setId("bk1");
+		 Author author=new Author("a12","kalam");
+		 Book b1=new Book(1);
+		 String id="a14";
+		 String name="ignitedminds";
+		 Book book=new ItBook(id,name,author,500,b1, "english",1.0);
+		 book.setId("a14");
 		 store.put(id,book);
 		 Book actual=service.findById(id);
 		 Assertions.assertNotNull(actual);
